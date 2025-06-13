@@ -76,7 +76,7 @@ def next_turn(snake, food):
         del snake.coordinates[-1]
         canvas.delete(snake.squares[-1])
         del snake.squares[-1]
-
+    
     # Verifica colisiones
     if check_collision(snake):
         game_over()
