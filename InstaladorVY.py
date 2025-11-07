@@ -1,14 +1,16 @@
-from pytube import YouTube 
-url = input("Ingresa la URL del video que deseas descargar: \n")
-try: 
-    video = YouTube(url)
-except:
-    print("Error de conexión")
+def suma(a: int, b: int) -> int:
+    """
+    Calcula la suma de dos números.
 
-download_video = video.streams.get_by_resolution("720p")
+    Args:
+        a (int): Primer número.
+        b (int): Segundo número.
 
-try:
-    download_video.download('.')
-except:
-    print("Error al descargar el video")
-print("Video descargado con éxito :D!")
+    Returns:
+        int: La suma de a y b.
+    """
+    return a + b
+
+if __name__ == "__main__":
+    resultado = suma(5, 3)
+    print("La suma es:", resultado)
