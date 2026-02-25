@@ -25,7 +25,7 @@ while True:
 
         if seleccion.isdigit():
             seleccion = int(seleccion)
-            if 1 <= seleccion <= len(productos):
+            if seleccion > 0 and seleccion <= len(productos):
                 producto_seleccionado = productos[seleccion - 1]
                 carrito.append(producto_seleccionado)
                 print(f"{producto_seleccionado} se agregó al carrito.")
