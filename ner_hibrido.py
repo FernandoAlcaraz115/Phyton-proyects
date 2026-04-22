@@ -8,7 +8,6 @@ from tkinter import messagebox, scrolledtext  # Componentes adicionales de Tkint
 import time  # Para medir tiempo de ejecución
 import random  # Para generar colores aleatorios
 
-
 # ---------------------------------------------------
 # Inicializar SpaCy
 # ---------------------------------------------------
@@ -60,7 +59,6 @@ def get_color(label):
         # Genera un color claro (usando caracteres de 8 a F)
         entity_colors[label] = "#" + "".join(random.choice("89ABCDEF") for _ in range(6))
     return entity_colors[label]
-
 
 # ---------------------------------------------------
 # Función principal de análisis
@@ -133,7 +131,6 @@ def analizar_texto():
     texto_coloreado.config(state="disabled")
     lista_entidades.config(state="disabled")
 
-
 # ---------------------------------------------------
 # Función para agregar nuevas entidades dinámicamente
 # ---------------------------------------------------
@@ -165,7 +162,6 @@ def agregar_entidad():
     entrada_label.delete(0, tk.END)
     entrada_regex.delete(0, tk.END)
 
-
 # ---------------------------------------------------
 # Mostrar pipeline actual
 # ---------------------------------------------------
@@ -175,7 +171,6 @@ def mostrar_pipeline():
     Muestra los componentes activos del pipeline de SpaCy.
     """
     messagebox.showinfo("Pipeline de SpaCy", "\n".join(nlp.pipe_names))
-
 
 # ---------------------------------------------------
 # Construcción de la Interfaz Gráfica
@@ -233,8 +228,7 @@ tk.Button(
     bg="#9C27B0", fg="white"
 ).pack(pady=5)
 
-# ------------------- Agregar entidad personalizada -------------------
-
+# ------------------- Agregar entidad personalizada ---------------------
 tk.Label(ventana, text="Agregar nueva entidad personalizada", font=("Arial", 13, "bold")).pack(anchor="w", padx=10, pady=10)
 
 frame = tk.Frame(ventana)
